@@ -1,0 +1,369 @@
+Program.Sub.ScreenSU.Start
+Gui.F_MoveTicket..create
+Gui.F_MoveTicket..caption("Move Ticket Terminal Maintenance")
+Gui.F_MoveTicket..size(10365,5115)
+Gui.F_MoveTicket..minx(0)
+Gui.F_MoveTicket..miny(0)
+Gui.F_MoveTicket..position(0,0)
+Gui.F_MoveTicket..event(UnLoad,form1_unload)
+Gui.F_MoveTicket..forecolor(0)
+Gui.F_MoveTicket..BackColor(-2147483633)
+Gui.F_MoveTicket..mousepointer(0)
+Gui.F_MoveTicket.txtTrmnl.create(textbox,"",True,855,300,0,390,600,True,0,Arial,8,-2147483643,1)
+Gui.F_MoveTicket.txtTrmnl.defaultvalue("")
+Gui.F_MoveTicket.txtTrmnl.tabstop(True)
+Gui.F_MoveTicket.txtTrmnl.tabindex(1)
+Gui.F_MoveTicket.txtTrmnl.MaxLength(3)
+Gui.F_MoveTicket.lbl1.create(label,"Terminal",True,1110,255,1,395,410,True,0,Arial,8,-2147483633,0)
+Gui.F_MoveTicket.lbl1.defaultvalue("")
+Gui.F_MoveTicket.lbl2.create(label,"Comments",True,1965,255,1,1455,410,True,0,Arial,8,-2147483633,0)
+Gui.F_MoveTicket.lbl2.defaultvalue("")
+Gui.F_MoveTicket.cmdAdd.create(button)
+Gui.F_MoveTicket.cmdAdd.caption("Add/Update")
+Gui.F_MoveTicket.cmdAdd.size(1125,375)
+Gui.F_MoveTicket.cmdAdd.position(390,1050)
+Gui.F_MoveTicket.cmdAdd.event(Click,cmdadd_click)
+Gui.F_MoveTicket.cmdAdd.defaultvalue("")
+Gui.F_MoveTicket.cmdAdd.tabstop(True)
+Gui.F_MoveTicket.cmdAdd.tabindex(5)
+Gui.F_MoveTicket.cmdDelete.create(button)
+Gui.F_MoveTicket.cmdDelete.caption("Delete")
+Gui.F_MoveTicket.cmdDelete.size(855,375)
+Gui.F_MoveTicket.cmdDelete.position(2530,1045)
+Gui.F_MoveTicket.cmdDelete.event(Click,cmddelete_click)
+Gui.F_MoveTicket.cmdDelete.defaultvalue("")
+Gui.F_MoveTicket.cmdDelete.tabstop(True)
+Gui.F_MoveTicket.cmdDelete.tabindex(8)
+Gui.F_MoveTicket.txtComment.create(textbox,"",True,3975,300,0,1455,600,True,0,Arial,8,-2147483643,1)
+Gui.F_MoveTicket.txtComment.defaultvalue("")
+Gui.F_MoveTicket.txtComment.tabstop(True)
+Gui.F_MoveTicket.txtComment.tabindex(2)
+Gui.F_MoveTicket.lvw1.create(listview)
+Gui.F_MoveTicket.lvw1.view(3)
+Gui.F_MoveTicket.lvw1.addlistviewcolumn("Terminal",1000,0)
+Gui.F_MoveTicket.lvw1.addlistviewcolumn("Comments",3000,0)
+Gui.F_MoveTicket.lvw1.addlistviewcolumn("Printer",2700,0)
+Gui.F_MoveTicket.lvw1.AddListViewColumn("Print Qty",1000,0)
+Gui.F_MoveTicket.lvw1.AddListViewColumn(" ",1,0)
+Gui.F_MoveTicket.lvw1.size(9420,2550)
+Gui.F_MoveTicket.lvw1.position(390,1605)
+Gui.F_MoveTicket.lvw1.event(ItemClick,lvw1_click)
+Gui.F_MoveTicket.cmdClear.create(button)
+Gui.F_MoveTicket.cmdClear.caption("Clear")
+Gui.F_MoveTicket.cmdClear.size(855,375)
+Gui.F_MoveTicket.cmdClear.position(1590,1050)
+Gui.F_MoveTicket.cmdClear.event(Click,cmdclear_click)
+Gui.F_MoveTicket.cmdClear.defaultvalue("")
+Gui.F_MoveTicket.cmdClear.tabstop(True)
+Gui.F_MoveTicket.cmdClear.tabindex(7)
+Gui.F_MoveTicket.txtPrinter.create(textbox,"",True,2790,300,0,5655,600,True,0,Arial,8,-2147483643,1)
+Gui.F_MoveTicket.txtPrinter.defaultvalue("")
+Gui.F_MoveTicket.txtPrinter.tabstop(True)
+Gui.F_MoveTicket.txtPrinter.tabindex(3)
+Gui.F_MoveTicket.txtPrinter.MaxLength(30)
+Gui.F_MoveTicket.lbl3.create(label,"Printer",True,1185,255,1,5655,405,True,0,Arial,8,-2147483633,0)
+Gui.F_MoveTicket.lbl3.defaultvalue("")
+Gui.F_MoveTicket.txtScrapPrinter.create(textbox,"",False,2775,300,0,5655,1260,True,0,Arial,8,-2147483643,1)
+Gui.F_MoveTicket.txtScrapPrinter.defaultvalue("")
+Gui.F_MoveTicket.txtScrapPrinter.MaxLength(30)
+Gui.F_MoveTicket.lbl4.create(label,"Scrap Printer (optional)",False,1935,255,1,5655,1050,True,0,Arial,8,-2147483633,0)
+Gui.F_MoveTicket.lbl4.defaultvalue("")
+Gui.F_MoveTicket.cmdPrnter.create(button)
+Gui.F_MoveTicket.cmdPrnter.caption("^")
+Gui.F_MoveTicket.cmdPrnter.size(450,300)
+Gui.F_MoveTicket.cmdPrnter.position(8505,600)
+Gui.F_MoveTicket.cmdPrnter.event(Click,cmdprnter_click)
+Gui.F_MoveTicket.cmdPrnter.defaultvalue("")
+Gui.F_MoveTicket.cmdScrapPrntr.create(button)
+Gui.F_MoveTicket.cmdScrapPrntr.caption("^")
+Gui.F_MoveTicket.cmdScrapPrntr.size(450,300)
+Gui.F_MoveTicket.cmdScrapPrntr.position(8505,1260)
+Gui.F_MoveTicket.cmdScrapPrntr.event(Click,cmdprnter_click)
+Gui.F_MoveTicket.cmdScrapPrntr.defaultvalue("")
+Gui.F_MoveTicket.cmdScrapPrntr.Visible(False)
+Gui.F_MoveTicket.lbl_Qty.Create(Label,"Qty",True,570,255,0,9075,405,True,0,"Arial",8,-2147483633,0)
+Gui.F_MoveTicket.txt_Qty.Create(TextBox,"",True,735,300,0,9075,600,True,0,"Arial",8,-2147483643,1)
+Gui.F_MoveTicket.txt_Qty.MaxLength(3)
+Gui.F_MoveTicket.txt_Qty.NumericOnly(2)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iOrdinal.Declare(Long,0)
+Variable.Global.sKey.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+'coded by ALD Date: 05/22/2020
+'using project GCG_3144 as base 
+
+	'Coded by: JCT
+	'Project Start Date: 05/06/2011
+	'Hooks:
+	'  Custom on new menu item
+	'Other Components:
+	'  used with GCG_3144_Print_Report_WIP_Operation_Label.gas
+	'  sql table GCG_3144_MVE_TKT_SU
+
+V.Local.sError.Declare(String)
+
+'open ODBC connection
+F.ODBC.Connection!Con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'look for existing records and load list view
+F.Intrinsic.Control.CallSub(Buildlistview)
+
+'show screen
+Gui.F_MoveTicket..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.form1_unload.Start
+F.Intrinsic.Control.SetErrorHandler("form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'close ODBC connection and end program
+F.ODBC.Connection!Con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.form1_unload.End
+
+Program.Sub.cmddelete_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sDelete.Declare(String)
+
+'delete the record from the table
+F.Intrinsic.String.Build("DELETE FROM GCG_5986_MVE_TKT_SU WHERE TRMNL = '{0}' ",V.Screen.F_MoveTicket!txtTrmnl.Text,V.Local.sDelete)
+F.ODBC.Connection!Con.Execute(V.Local.sDelete)
+
+'remove the line from the view
+Gui.F_MoveTicket.lvw1.RemoveItem(V.Global.sKey)
+'call sub to clear text boxes
+F.Intrinsic.Control.CallSub(Cmdclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmddelete_click.End
+
+Program.Sub.cmdadd_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTrmnl.Declare(String)
+V.Local.Sel.Declare(String)
+
+
+Function.Intrinsic.Control.If(v.Screen.F_MoveTicket!txtComment.Text,=,"")
+	Function.Intrinsic.UI.Msgbox("Comment must be entered")
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+'format terminal to 3 characters
+V.Local.sTrmnl.Set(V.Screen.F_MoveTicket!txtTrmnl.Text)
+F.Intrinsic.String.LPad(V.Local.sTrmnl.Trim,"0",3,V.Local.sTrmnl)
+
+'add record to table
+F.Intrinsic.String.Build("SELECT * FROM GCG_5986_MVE_TKT_SU WHERE TRMNL = '{0}' ",V.Local.sTrmnl.Trim,V.Local.Sel)
+F.ODBC.Connection!Con.OpenRecordsetRW("rstX",V.Local.Sel)
+'if record does not already exists for the entered terminal, add a new record
+F.Intrinsic.Control.If(V.ODBC.Con!rstX.EOF,=,True)
+	F.ODBC.Con!rstX.AddNew
+	F.ODBC.Con!rstX.Set!TRMNL(V.Local.sTrmnl.Trim)
+F.Intrinsic.Control.endif
+'otherwise, just update the comment
+F.ODBC.Con!rstX.Set!COMMENTS(V.Screen.F_MoveTicket!txtComment.Text)
+F.ODBC.Con!rstX.Set!Printer(V.Screen.F_MoveTicket!txtPrinter.Text)
+F.ODBC.Con!rstX.Set!Print_Qty(V.Screen.F_MoveTicket!txt_Qty.Text)
+F.ODBC.Con!rstX.Set!ScrapPrinter(V.Screen.F_MoveTicket!txtScrapPrinter.Text)
+F.ODBC.Con!rstX.Update
+F.ODBC.Con!rstX.Close
+
+Gui.F_MoveTicket.lvw1.ClearItems
+F.Intrinsic.Control.CallSub(Buildlistview)
+
+'call sub to clear the text boxes
+F.Intrinsic.Control.CallSub(Cmdclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdadd_click.End
+
+Program.Sub.lvw1_click.Start
+F.Intrinsic.Control.SetErrorHandler("lvw1_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iOrd.Declare(Long)
+
+'get the item key
+Gui.F_MoveTicket.lvw1.RetrieveSelectedListItems(V.Local.iOrd)
+	F.Intrinsic.String.LPad(V.Local.iOrd,"0",3,V.Global.sKey)
+'get the item ordinal
+Gui.F_MoveTicket.lvw1.RetrieveItemOrdinal(V.Global.sKey,V.Global.iOrdinal)
+
+'get the line of text
+V.Local.sRet.Set(V.Screen.F_MoveTicket!lvw1.ListItemTextExtended(V.Global.iOrdinal))
+'split to get trmnl and comment
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'write values to text boxes
+Gui.F_MoveTicket.txtTrmnl.Text(V.Local.sRet(0).Trim)
+Gui.F_MoveTicket.txtComment.Text(V.Local.sRet(1).Trim)
+Gui.F_MoveTicket.txtPrinter.Text(V.Local.sRet(2).Trim)
+Gui.F_MoveTicket.txt_Qty.Text(V.Local.sRet(3).Trim)
+Gui.F_MoveTicket.txtScrapPrinter.Text(V.Local.sRet(4).Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("lvw1_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.lvw1_click.End
+
+Program.Sub.cmdclear_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'clear text boxes
+Gui.F_MoveTicket.txtComment.Text("")
+Gui.F_MoveTicket.txtTrmnl.Text("")
+Gui.F_MoveTicket.txtPrinter.Text("")
+Gui.F_MoveTicket.txt_Qty.Text("")
+Gui.F_MoveTicket.txtScrapPrinter.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdclear_click.End
+
+Program.Sub.BuildListView.Start
+F.Intrinsic.Control.SetErrorHandler("BuildListView_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'look for existing records and load list view
+F.ODBC.Connection!Con.OpenLocalRecordsetRW("rstX","SELECT * FROM GCG_5986_MVE_TKT_SU")
+F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstX.EOF,=,True)
+	Gui.F_MoveTicket.lvw1.AddListItem(V.ODBC.Con!rstX.FieldValTrim!TRMNL,V.ODBC.Con!rstX.FieldValTrim!TRMNL)
+	Gui.F_MoveTicket.lvw1.SetListItemSubItemText(V.ODBC.Con!rstX.FieldValTrim!TRMNL,1,V.ODBC.Con!rstX.FieldValTrim!COMMENTS)
+	Gui.F_MoveTicket.lvw1.SetListItemSubItemText(V.ODBC.Con!rstX.FieldValTrim!TRMNL,2,V.ODBC.Con!rstX.FieldValTrim!Printer)
+	Gui.F_MoveTicket.lvw1.SetListItemSubItemText(V.ODBC.Con!rstX.FieldValTrim!TRMNL,3,v.ODBC.Con!rstX.FieldValTrim!Print_Qty)
+	Gui.F_MoveTicket.lvw1.SetListItemSubItemText(V.ODBC.Con!rstX.FieldValTrim!TRMNL,4,V.ODBC.Con!rstX.FieldValTrim!ScrapPrinter)
+F.ODBC.Con!rstX.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.Con!rstX.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildListView_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildListView.End
+
+Program.Sub.cmdprnter_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprnter_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Printer.SelectPrinterDialog
+f.Intrinsic.Control.If(v.Ambient.PRINTERDIALOGSELECTION,<>,"***CANCEL***")
+	F.Intrinsic.Control.If(V.Args.CONTROLNAME,=,"CMDPRNTER")
+		Gui.F_MoveTicket.txtPrinter.Text(v.Ambient.PRINTERDIALOGSELECTION)
+
+	F.Intrinsic.Control.ElseIf(V.Args.CONTROLNAME,=,"CMDSCRAPPRNTR")
+		Gui.F_MoveTicket.txtScrapPrinter.Text(v.Ambient.PRINTERDIALOGSELECTION)
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprnter_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5986_Move_Tckt_Trmnl_Comments.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdprnter_click.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_3144_Move_Tckt_Trmnl_Comments$}$Strider$}$12/7/2015$}$False
+${$1$}$$}$$}$0$}$-1$}$Hook$}$12/8/2015 12:35:38 PM$}$Custom menu item
+${$2$}$$}$$}$1$}$2$}$GAB$}$12/8/2015 12:35:38 PM$}$GCG_3144_PRINT_REPORT_WIP_OPERATION_LABEL.gas
+${$2$}$$}$$}$0$}$4$}$sql$}$12/7/2015 2:16:16 PM$}$GCG_3144_MVE_TKT_SU
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Purpose:
+? Paperless ? at least less paper?
+? Identify movement of partial/complete transfers between operations
+? Identify scrap/rejected parts for quality (ISO required)
+
+Move Tickets will print for both good and scrap pieces reported when updating labor on an active work order.
+
+Original project 1011
+Program.Sub.Comments.End
